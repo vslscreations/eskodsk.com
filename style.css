@@ -17,14 +17,29 @@ background:#07111f;
 color:white;
 
 line-height:1.6;
+background:
+radial-gradient(
+circle at top right,
+rgba(79,140,255,.18),
+transparent 35%
+),
+#050816;
 
 }
 
 nav{
 
-position:sticky;
+position:fixed;
 
-top:0;
+top:20px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:90%;
+
+max-width:1200px;
 
 display:flex;
 
@@ -32,16 +47,19 @@ justify-content:space-between;
 
 align-items:center;
 
-padding:25px 8%;
+padding:18px 30px;
 
-background:rgba(7,17,31,.95);
+background:rgba(11,18,32,.7);
 
-backdrop-filter:blur(10px);
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:20px;
 
 z-index:1000;
 
 }
-
 .logo{
 
 font-size:28px;
@@ -100,18 +118,15 @@ padding:0 10%;
 
 .hero h1{
 
-font-size:64px;
+font-size:72px;
+
+line-height:1.05;
+
+letter-spacing:-3px;
 
 font-weight:800;
 
-max-width:900px;
-
-margin-bottom:25px;
-
-line-height:1.1;
-
 }
-
 .hero p{
 
 font-size:22px;
@@ -154,10 +169,13 @@ box-shadow:0 10px 30px rgba(59,130,246,.4);
 
 section{
 
-padding:100px 8%;
+padding:140px 8%;
+
+max-width:1400px;
+
+margin:auto;
 
 }
-
 section h2{
 
 font-size:42px;
@@ -968,6 +986,71 @@ font-size:15px;
 flex-direction:column;
 
 text-align:center;
+
+}
+
+}
+
+.section-intro{
+
+max-width:750px;
+
+margin:0 auto 60px;
+
+text-align:center;
+
+font-size:20px;
+
+color:#9CA3AF;
+
+}
+
+
+.capability-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:40px;
+
+max-width:1100px;
+
+margin:auto;
+
+}
+
+
+.capability{
+
+padding:20px;
+
+}
+
+
+.capability h3{
+
+font-size:26px;
+
+margin-bottom:15px;
+
+}
+
+
+.capability p{
+
+font-size:18px;
+
+color:#9CA3AF;
+
+}
+
+
+@media(max-width:900px){
+
+.capability-grid{
+
+grid-template-columns:1fr;
 
 }
 
